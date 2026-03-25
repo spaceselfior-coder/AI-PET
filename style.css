@@ -44,3 +44,60 @@ body {
   top: 15px;
   left: 20px;
 }
+body {
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Floating body */
+.kibo {
+  display: flex;
+  gap: 40px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Eye */
+.eye {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #7b5cff, #00d4ff);
+  position: relative;
+  box-shadow: 0 0 25px rgba(0,255,255,0.7);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+/* Pupil */
+.pupil {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transition: 0.2s;
+}
+
+/* Shine */
+.eye::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+}
